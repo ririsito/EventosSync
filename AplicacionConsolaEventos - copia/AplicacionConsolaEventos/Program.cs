@@ -22,6 +22,10 @@ namespace AplicacionConsolaEventos
         {
             GetEventos eventos = new GetEventos();
 
+
+            String fecha = DateTime.Now.ToString("d/M/yyyy");
+
+
             List<Eventos> Lista = new List<Eventos>();
 
             List<EventosComedor> ListaC = new List<EventosComedor>();
@@ -42,7 +46,7 @@ namespace AplicacionConsolaEventos
 
                 var context = new PermisosQCTTContext();
 
-                if (ValueExists(evento.Hora, evento.Id) == false)
+                if (ValueExists(evento.Hora, evento.Id, fecha) == false)
                 {
                     var count = context.Eventos
                         .Where(o => o.IdEmpleado == evento.Id && o.Fecha==evento.Fecha)
@@ -75,7 +79,7 @@ namespace AplicacionConsolaEventos
 
                 var context = new PermisosQCTTContext();
 
-                if (ValueExistsC(evento.Hora, evento.Id) == false)
+                if (ValueExistsC(evento.Hora, evento.Id, fecha) == false)
                 {
                     var count = context.EventosComedor
                         .Where(o => o.IdEmpleado == evento.IdEmpleado && o.Fecha == evento.Fecha)
@@ -108,23 +112,18 @@ namespace AplicacionConsolaEventos
             //Console.ReadKey();
         }
 
-        private static bool  ValueExists(string _Value,int idemp)
+        private static bool  ValueExists(string _Value,int idemp, string fecha)
         {
             var context = new PermisosQCTTContext();
-            return context.Eventos.Any(x => x.Hora.Equals(_Value)&&x.IdEmpleado.Equals(idemp)); //Reducir el ámbito del contexto
+            return context.Eventos.Any(x => x.Hora.Equals(_Value)&&x.IdEmpleado.Equals(idemp)&&x.Fecha==fecha); //Reducir el ámbito del contexto
         }
 
 
-        //private static bool EntradaSAlida(string _Value, int idemp)
-        //{
-        //    var context = new PermisosQCTTContext();
-        //    return context.Eventos.Any(x => x.Hora.Equals(_Value) && x.IdEmpleado.Equals(idemp)); //Reducir el ámbito del contexto
-        //}
 
-        private static bool ValueExistsC(string _Value, int idemp)
+        private static bool ValueExistsC(string _Value, int idemp, string fecha)
         {
             var context = new PermisosQCTTContext();
-            return context.EventosComedor.Any(x => x.Hora == _Value && x.IdEmpleado == idemp.ToString()); //Reducir el ámbito del contexto
+            return context.EventosComedor.Any(x => x.Hora == _Value && x.IdEmpleado == idemp.ToString()&& x.Fecha == fecha); //Reducir el ámbito del contexto
         }
 
 
