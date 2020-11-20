@@ -31,7 +31,7 @@ namespace AplicacionConsolaEventos
         public int idwSecond;
         public int idwWorkCode;
 
-        public ListasEventos Get(int dia)
+        public ListasEventos Get(int dia,int mes, int año)
         {
       
 
@@ -44,7 +44,7 @@ namespace AplicacionConsolaEventos
                 while (axCZKEM1.SSR_GetGeneralLogData(iMachineNumber, out idwEnrollNumber, out idwVerifyMode
                          , out idwInOutMode, out idwYear, out idwMonth, out idwDay, out idwHour, out idwMinute, out idwSecond, ref idwWorkCode))//get records from the memory
                     {
-                        if (idwDay == dia)
+                        if (idwDay == dia && idwMonth== mes && idwYear == año)
                         {
                             var obj = new Eventos()
                             {
@@ -62,7 +62,7 @@ namespace AplicacionConsolaEventos
                 while (axCZKEM2.SSR_GetGeneralLogData(iMachineNumber, out idwEnrollNumber, out idwVerifyMode
                      , out idwInOutMode, out idwYear, out idwMonth, out idwDay, out idwHour, out idwMinute, out idwSecond, ref idwWorkCode))//get records from the memory
                 {
-                    if (idwDay == dia)
+                    if (idwDay == dia && idwMonth == mes && idwYear == año)
                     {
                         var obj = new Eventos()
                         {
@@ -80,7 +80,7 @@ namespace AplicacionConsolaEventos
                 while (axCZKEM3.SSR_GetGeneralLogData(iMachineNumber, out idwEnrollNumber, out idwVerifyMode
                          , out idwInOutMode, out idwYear, out idwMonth, out idwDay, out idwHour, out idwMinute, out idwSecond, ref idwWorkCode))//get records from the memory
                 {
-                    if (idwDay == dia)
+                    if (idwDay == dia && idwMonth == mes && idwYear == año)
                     {
                         var obj = new Eventos()
                         {
@@ -98,7 +98,7 @@ namespace AplicacionConsolaEventos
                 while (axCZKEM4.SSR_GetGeneralLogData(iMachineNumber, out idwEnrollNumber, out idwVerifyMode
                   , out idwInOutMode, out idwYear, out idwMonth, out idwDay, out idwHour, out idwMinute, out idwSecond, ref idwWorkCode))//get records from the memory
                 {
-                    if (idwDay == dia)
+                    if (idwDay == dia && idwMonth == mes && idwYear == año)
                     {
                         var obj = new EventosComedor()
                         {

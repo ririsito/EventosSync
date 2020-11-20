@@ -30,8 +30,8 @@ namespace AplicacionConsolaEventos
 
             List<EventosComedor> ListaC = new List<EventosComedor>();
 
-            Lista = eventos.Get(DateTime.Now.Day).Even.ToList();
-            ListaC = eventos.Get(DateTime.Now.Day).EvenComedor.ToList();
+            Lista = eventos.Get(DateTime.Now.Day,DateTime.Now.Month, DateTime.Now.Year).Even.ToList();
+            ListaC = eventos.Get(DateTime.Now.Day,DateTime.Now.Month, DateTime.Now.Year).EvenComedor.ToList();
 
             List<Eventos> Listaderef = (from m in Lista
                                         orderby m.Hora
