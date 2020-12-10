@@ -26,7 +26,7 @@ namespace AplicacionConsolaEventos
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=172.20.49.48\\QAMLOC,58826;Database=PermisosQCTT;User ID=userpermisosqct;Password=User$Permisos%Qct.2020;");
+                optionsBuilder.UseSqlServer("Server=172.20.18.5\\QAMLOC,58826;Database=PermisosQCTT;User ID=userpermisosqct;Password=User$Permisos%Qct.2020;");
             }
         }
 
@@ -63,7 +63,14 @@ namespace AplicacionConsolaEventos
 
             modelBuilder.Entity<Eventos>(entity =>
             {
-               
+
+                entity.Property(e => e.Id);
+
+
+                entity.Property(e => e.IdEmpleado)
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.Fecha)
                     .HasMaxLength(20)
                     .IsUnicode(false);

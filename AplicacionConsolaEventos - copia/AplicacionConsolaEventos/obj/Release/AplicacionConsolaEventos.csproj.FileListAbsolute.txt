@@ -460,7 +460,6 @@ C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copi
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\bin\Release\System.Memory.xml
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\bin\Release\System.Numerics.Vectors.xml
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\obj\Release\AplicacionConsolaEventos.csprojAssemblyReference.cache
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\obj\Release\AplicacionConsolaEventos.exe.config
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\obj\Release\Interop.zkemkeeper.dll
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\obj\Release\AplicacionConsolaEventos.csproj.ResolveComReference.cache

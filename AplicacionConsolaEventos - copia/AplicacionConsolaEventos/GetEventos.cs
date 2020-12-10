@@ -31,12 +31,12 @@ namespace AplicacionConsolaEventos
         public int idwSecond;
         public int idwWorkCode;
 
-        public ListasEventos Get(int dia,int mes, int año)
+        public List<List<Eventos>> GetListas(int dia,int mes, int año)
         {
-      
 
+            List<List<Eventos>> ListaPadre = new List<List<Eventos>>();
             List<Eventos> ListaE = new List<Eventos>();
-            List<EventosComedor> ListaC = new List<EventosComedor>();
+            List<Eventos> ListaC = new List<Eventos>();
 
             if (conectar())
             {
@@ -48,7 +48,7 @@ namespace AplicacionConsolaEventos
                         {
                             var obj = new Eventos()
                             {
-                                Id = Convert.ToInt32(idwEnrollNumber),
+                                IdEmpleado = idwEnrollNumber,
                                 Hora = idwHour + ":" + idwMinute + ":" + idwSecond,
                                 Fecha = idwDay + "/" + idwMonth + "/" + idwYear
 
@@ -66,7 +66,7 @@ namespace AplicacionConsolaEventos
                     {
                         var obj = new Eventos()
                         {
-                            Id = Convert.ToInt32(idwEnrollNumber),
+                            IdEmpleado = idwEnrollNumber,
                             Hora = idwHour + ":" + idwMinute + ":" + idwSecond,
                             Fecha = idwDay + "/" + idwMonth + "/" + idwYear
 
@@ -84,7 +84,7 @@ namespace AplicacionConsolaEventos
                     {
                         var obj = new Eventos()
                         {
-                            Id = Convert.ToInt32(idwEnrollNumber),
+                            IdEmpleado = idwEnrollNumber,
                             Hora = idwHour + ":" + idwMinute + ":" + idwSecond,
                             Fecha = idwDay + "/" + idwMonth + "/" + idwYear
 
@@ -100,9 +100,9 @@ namespace AplicacionConsolaEventos
                 {
                     if (idwDay == dia && idwMonth == mes && idwYear == año)
                     {
-                        var obj = new EventosComedor()
+                        var obj = new Eventos()
                         {
-                            Id = Convert.ToInt32(idwEnrollNumber),
+                            IdEmpleado = idwEnrollNumber,
                             Hora = idwHour + ":" + idwMinute + ":" + idwSecond,
                             Fecha = idwDay + "/" + idwMonth + "/" + idwYear
 
@@ -114,9 +114,11 @@ namespace AplicacionConsolaEventos
                 }
 
                 //IEnumerable<Eventos> evento = Lista;
-               
-                
-                return new ListasEventos {Even = ListaE,EvenComedor = ListaC};
+
+                ListaPadre.Add(ListaE);
+                ListaPadre.Add(ListaC);
+
+                return ListaPadre;
                 
             }
 
@@ -136,7 +138,7 @@ namespace AplicacionConsolaEventos
 
             bIsConnected = axCZKEM1.Connect_Net("172.19.7.21", 4370);
             bIsConnected2 = axCZKEM2.Connect_Net("172.19.7.20", 4370);
-            bIsConnected3 = axCZKEM3.Connect_Net("172.19.7.23", 4370);
+            bIsConnected3 = axCZKEM3.Connect_Net("172.19.7.24", 4370);
             bIsConnected4 = axCZKEM4.Connect_Net("172.19.7.22", 4370);
 
             if (bIsConnected == true)

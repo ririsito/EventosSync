@@ -624,3 +624,4 @@ C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copi
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\obj\Debug\AplicacionConsolaEventos.csproj.CopyComplete
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\obj\Debug\AplicacionConsolaEventos.exe
 C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\obj\Debug\AplicacionConsolaEventos.pdb
+C:\Users\qctrzavala\Documents\GitHub\EventosSync\AplicacionConsolaEventos - copia\AplicacionConsolaEventos\obj\Debug\AplicacionConsolaEventos.csprojAssemblyReference.cache
